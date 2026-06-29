@@ -1,0 +1,34 @@
+#!/usr/bin/python3
+def start():
+    print("You are at a crossroads in a dark forest.")
+    choice = input("Do you go left or right? ").lower()
+    if choice == "left":
+        cave()
+    elif choice == "right":
+        village()
+    else:
+        print("You stand still. A wolf finds you. Game over.")
+
+def cave():
+    print("You enter a cave.")
+    choice = input("Do you grab the glowing gem or leave it? ").lower()
+    if choice == "grab":
+        ending_win()
+    else:
+        ending_lost()
+
+def village():
+    print("You reach a village. A guard blocks the gate.")
+    choice = input("Do you show your sword or speak kindly? ").lower()
+    if choice == "speak":
+        ending_win()
+    else:
+        ending_lost()
+
+def ending_win():
+    print("You succeed and become the hero of the land! YOU WIN!")
+
+def ending_lost():
+    print("Things go wrong. You retreat into the night. GAME OVER.")
+
+start()
